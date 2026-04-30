@@ -1,0 +1,6 @@
+[submodule "vendor/UndertaleModTool"]
+	path = vendor/UndertaleModTool
+	url = https://github.com/UnderminersTeam/UndertaleModTool
+[submodule "vendor/GMDocsGenerator"]
+	path = vendor/GMDocsGenerator
+	url = https://github.com/robieless/GMDocsGenerator

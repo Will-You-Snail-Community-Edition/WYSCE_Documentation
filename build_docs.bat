@@ -1,0 +1,1 @@
+dotnet run --project "./doc_generator/GMDocsGenerator.csproj" %1 %2
