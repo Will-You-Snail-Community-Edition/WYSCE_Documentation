@@ -4,17 +4,17 @@ permalink: /functions/modhelper_createprop_yscale
 # modhelper_createprop_yscale  
 &nbsp;  
 # Description  
-(No description provided. Feel free to make a pull request!) 
+Returns a VERTICAL SCALE tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me 
 &nbsp;  
 # Arguments
-### argument0
-
+### f_min
+The minimum y scale of the object
 &nbsp;    
-### argument1
-
+### f_max
+The maximum y scale of the object
 &nbsp;    
-### argument2
-
+### f_scroll_steps
+The amount that the slider in the editor's settings UI steps by
 &nbsp;    
 
 

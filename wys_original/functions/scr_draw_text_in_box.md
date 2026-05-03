@@ -31,23 +31,5 @@ permalink: /functions/scr_draw_text_in_box
 ### argument7
 
 &nbsp;    
-### argument8
-
-&nbsp;    
-### argument9
-
-&nbsp;    
-### argument10
-
-&nbsp;    
-### argument11
-
-&nbsp;    
-### argument12
-
-&nbsp;    
-### argument13
-
-&nbsp;    
 
 

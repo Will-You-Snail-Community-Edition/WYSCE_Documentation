@@ -25,5 +25,8 @@ permalink: /functions/TP_sprite
 ### argument5
 
 &nbsp;    
+### argument6
+
+&nbsp;    
 
 

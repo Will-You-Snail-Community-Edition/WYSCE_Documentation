@@ -4,32 +4,32 @@ permalink: /functions/modhelper_createprop_int
 # modhelper_createprop_int  
 &nbsp;  
 # Description  
-(No description provided. Feel free to make a pull request!) 
+Returns an INTEGER tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me 
 &nbsp;  
 # Arguments
-### argument0
-
+### key
+The identifier the editor object is saved/loaded/referred to as internally
 &nbsp;    
-### argument1
-
+### copy_property_to_placed_obj
+Whether or not to copy the property to a newly placed object
 &nbsp;    
-### argument2
-
+### int_min
+The minimum value of the property
 &nbsp;    
-### argument3
-
+### int_max
+The maximum value of the property
 &nbsp;    
-### argument4
-
+### loca_string
+The id of the NAME of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an "invalid loca string" variant.
 &nbsp;    
-### argument5
-
+### icon
+The icon of the property in the editor settings UI
 &nbsp;    
-### argument6
-
+### default_value
+The default value of the property
 &nbsp;    
-### argument7
-
+### looltip_loca_string
+The id of the TOOL TIP of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an "invalid loca string" variant.
 &nbsp;    
 
 

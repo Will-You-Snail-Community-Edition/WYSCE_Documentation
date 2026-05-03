@@ -30,18 +30,25 @@ public class Program
         functionsEntry = File.ReadAllText(Path.Combine(templatesDirectory, "functionsMenuEntry.md"));
 
 
-        string dataWinPath_ce = args[0];
-        GenerateDocsForGame(dataWinPath_ce, "./wysce", "ce");
-
-        string dataWinPath_og = args[1];
+        string dataWinPath_og = args[0];
         GenerateDocsForGame(dataWinPath_og, "./wys_original", "og");
+
+        string dataWinPath_ce = args[1];
+        GenerateDocsForGame(dataWinPath_ce, "./wysce", "ce");
     }
 
     public static void GenerateDocsForGame(string dataWinPath, string outputDirectory, string fileEndingIdentifier)
     {
 
-        Documentation docOverrides = JsonSerializer.Deserialize<Documentation>(File.ReadAllText($"./manual_overrides_{fileEndingIdentifier}.json"));
         Dictionary<string, FunctionDoc> functionOverrides = new Dictionary<string, FunctionDoc>();
+
+        Documentation docOverrides = JsonSerializer.Deserialize<Documentation>(File.ReadAllText($"./manual_overrides_both.json"));
+        foreach (FunctionDoc funcOverride in docOverrides.functions)
+        {
+            functionOverrides.Add(funcOverride.name, funcOverride);
+        }
+
+        docOverrides = JsonSerializer.Deserialize<Documentation>(File.ReadAllText($"./manual_overrides_{fileEndingIdentifier}.json"));
         foreach (FunctionDoc funcOverride in docOverrides.functions)
         {
             functionOverrides.Add(funcOverride.name, funcOverride);
@@ -106,6 +113,8 @@ public class Program
                 }
             }
         }
+
+        functionDocs = functionDocs.OrderBy(f => f.name).ToList();
 
         Documentation documentation = new Documentation
         {

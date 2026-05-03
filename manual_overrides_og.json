@@ -1,21 +1,16 @@
 {
     "functions": [
         {
-            "name": "aivl_play",
-            "argCount": 2,
+            "name": "modhelper_mark_object_as_modded",
+            "argCount": 1,
             "arguments": [
                 {
-                    "name": "localization_key",
-                    "description": "The key of the voiceline's text in the localization spreadsheet. The translation spreadsheet can be found in [WYS INSTALL LOCATION]\\WILL YOU SNAIL LOCA\\Legal WYS Loca - Main.tsv",
-                    "optional": false
-                },
-                {
-                    "name": "only_play_after",
-                    "description": "A value that cooresponds to how much time must have passed since the previous voicelines was played.  \n3 = play immediately, 2 = seven seconds minimum, 1 = three seconds minimum.",
+                    "name": "object_struct",
+                    "description": "The object struct you want to mark as modded.",
                     "optional": false
                 }
             ],
-            "description": "A basic function to play one of squid's voicelines. For more advanced functionality, see [aivl_play_ext](/WYSCE_Documentation/functions/aivl_play_ext) and other aivl_play functions.",
+            "description": "Marks an object as modded, meaning any level using it will not be openable in the vanilla game. DO NOT USE THIS FUNCTION FOR WYS COMMUNITY EDITION! For vanilla mods, please call this function ALL custom object structs, or object structs you've modified to have extra properties that won't work on a vanilla game!",
             "outdated": false
         }
     ]

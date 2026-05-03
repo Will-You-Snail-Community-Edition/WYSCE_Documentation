@@ -19,8 +19,5 @@ permalink: /functions/draw_tool_button
 ### argument3
 
 &nbsp;    
-### argument4
-
-&nbsp;    
 
 

@@ -1,0 +1,425 @@
+{
+    "functions": [
+        {
+            "name": "aivl_play",
+            "argCount": 2,
+            "arguments": [
+                {
+                    "name": "localization_key",
+                    "description": "The key of the voiceline's text in the localization spreadsheet. The translation spreadsheet can be found in [WYS INSTALL LOCATION]\\WILL YOU SNAIL LOCA\\Legal WYS Loca - Main.tsv",
+                    "optional": false
+                },
+                {
+                    "name": "only_play_after",
+                    "description": "A value that cooresponds to how much time must have passed since the previous voicelines was played.  \n3 = play immediately, 2 = seven seconds minimum, 1 = three seconds minimum.",
+                    "optional": false
+                }
+            ],
+            "description": "A basic function to play one of squid's voicelines. For more advanced functionality, see [aivl_play_ext](/WYSCE_Documentation/functions/aivl_play_ext) and other aivl_play functions.",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_comment",
+            "argCount": 1,
+            "arguments": [
+                {
+                    "name": "comment",
+                    "description": "The string that is to show up for modders in the decompiled code.",
+                    "optional": false
+                }
+            ],
+            "description": "This function does nothing, it is generously used by the developers in a few spots in the game to explain how things work in some parts of decommpiled code. It's basically a replacement for a comment, since those don't save to decompilable code.",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_create_struct",
+            "argCount": 0,
+            "arguments": [],
+            "description": "This function was useful back when UndertaleModTool didn't support structs, all it does is return an empty struct. Now that UMT supports structs it is useless unless you're using an older version like the old mod loader \"GMSL\" does.",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_xflip",
+            "argCount": 0,
+            "arguments": [],
+            "description": "Returns a HORIZONTAL FLIP tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_yflip",
+            "argCount": 0,
+            "arguments": [],
+            "description": "Returns a VERTICAL FLIP tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_xscale",
+            "argCount": 3,
+            "arguments": [
+                {
+                    "name": "f_min",
+                    "description": "The minimum x scale of the object",
+                    "optional": false
+                },
+                {
+                    "name": "f_max",
+                    "description": "The maximum x scale of the object",
+                    "optional": false
+                },
+                {
+                    "name": "f_scroll_steps",
+                    "description": "The amount that the slider in the editor's settings UI steps by",
+                    "optional": false
+                }
+            ],
+            "description": "Returns a HORIZONTAL SCALE tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_yscale",
+            "argCount": 3,
+            "arguments": [
+                {
+                    "name": "f_min",
+                    "description": "The minimum y scale of the object",
+                    "optional": false
+                },
+                {
+                    "name": "f_max",
+                    "description": "The maximum y scale of the object",
+                    "optional": false
+                },
+                {
+                    "name": "f_scroll_steps",
+                    "description": "The amount that the slider in the editor's settings UI steps by",
+                    "optional": false
+                }
+            ],
+            "description": "Returns a VERTICAL SCALE tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_scale",
+            "argCount": 3,
+            "arguments": [
+                {
+                    "name": "f_min",
+                    "description": "The minimum scale of the object",
+                    "optional": false
+                },
+                {
+                    "name": "f_max",
+                    "description": "The maximum scale of the object",
+                    "optional": false
+                },
+                {
+                    "name": "f_scroll_steps",
+                    "description": "The amount that the slider in the editor's settings UI steps by",
+                    "optional": false
+                }
+            ],
+            "description": "Returns an OBJECT SCALE tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_rotation",
+            "argCount": 0,
+            "arguments": [],
+            "description": "Returns an OBJECT ROTATION tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_rotation_90",
+            "argCount": 0,
+            "arguments": [],
+            "description": "Returns an OBJECT ROTATION (locked to 90-degree increments) tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_int",
+            "argCount": 8,
+            "arguments": [
+                {
+                    "name": "key",
+                    "description": "The identifier the editor object is saved/loaded/referred to as internally",
+                    "optional": false
+                },
+                {
+                    "name": "copy_property_to_placed_obj",
+                    "description": "Whether or not to copy the property to a newly placed object",
+                    "optional": false
+                },
+                {
+                    "name": "int_min",
+                    "description": "The minimum value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "int_max",
+                    "description": "The maximum value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "loca_string",
+                    "description": "The id of the NAME of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "icon",
+                    "description": "The icon of the property in the editor settings UI",
+                    "optional": false
+                },
+                {
+                    "name": "default_value",
+                    "description": "The default value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "looltip_loca_string",
+                    "description": "The id of the TOOL TIP of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                }
+            ],
+            "description": "Returns an INTEGER tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_flag",
+            "argCount": 7,
+            "arguments": [
+                {
+                    "name": "key",
+                    "description": "The identifier the editor object is saved/loaded/referred to as internally",
+                    "optional": false
+                },
+                {
+                    "name": "copy_property_to_placed_obj",
+                    "description": "Whether or not to copy the property to a newly placed object",
+                    "optional": false
+                },
+                {
+                    "name": "loca_string",
+                    "description": "The id of the NAME of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "icon",
+                    "description": "The icon of the property in the editor settings UI",
+                    "optional": false
+                },
+                {
+                    "name": "default_value",
+                    "description": "The default value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "looltip_loca_string",
+                    "description": "The id of the TOOL TIP of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "array_loca_values",
+                    "description": "The id of the NAMES OF THE INDIVIDUAL OPTIONS/CHECKBOXES of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                }
+            ],
+            "description": "Returns a FLAG tool property (a multiple checkbox UI such as the \"what triggers a trigger\" properties) to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_int_as_string",
+            "argCount": 7,
+            "arguments": [
+                {
+                    "name": "key",
+                    "description": "The identifier the editor object is saved/loaded/referred to as internally",
+                    "optional": false
+                },
+                {
+                    "name": "copy_property_to_placed_obj",
+                    "description": "Whether or not to copy the property to a newly placed object",
+                    "optional": false
+                },
+                {
+                    "name": "loca_string",
+                    "description": "The id of the NAME of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "icon",
+                    "description": "The icon of the property in the editor settings UI",
+                    "optional": false
+                },
+                {
+                    "name": "default_value",
+                    "description": "The default value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "looltip_loca_string",
+                    "description": "The id of the TOOL TIP of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "array_loca_values",
+                    "description": "The id of the NAMES OF THE INDIVIDUAL OPTIONS/CHECKBOXES of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                }
+            ],
+            "description": "Returns an integer-based tool property (that shows up in-game as a slider that picks between strings) to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_sprite",
+            "argCount": 6,
+            "arguments": [
+                {
+                    "name": "key",
+                    "description": "The identifier the editor object is saved/loaded/referred to as internally",
+                    "optional": false
+                },
+                {
+                    "name": "loca_string",
+                    "description": "The id of the NAME of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "icon",
+                    "description": "The icon of the property in the editor settings UI",
+                    "optional": false
+                },
+                {
+                    "name": "default_value",
+                    "description": "The default value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "looltip_loca_string",
+                    "description": "The id of the TOOL TIP of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "array_sprite_picking_functions",
+                    "description": "An array of FUNCTIONS that return which sprite is used for each option, NOT a direct array of the sprites themselves.",
+                    "optional": false
+                }
+            ],
+            "description": "Returns a SPRITE/TEXTURE tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_float",
+            "argCount": 10,
+            "arguments": [
+                {
+                    "name": "key",
+                    "description": "The identifier the editor object is saved/loaded/referred to as internally",
+                    "optional": false
+                },
+                {
+                    "name": "copy_property_to_placed_obj",
+                    "description": "Whether or not to copy the property to a newly placed object",
+                    "optional": false
+                },
+                {
+                    "name": "f_min",
+                    "description": "The minimum value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "f_max",
+                    "description": "The maximum value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "f_scroll_steps",
+                    "description": "The amount that the slider in the editor's settings UI steps by",
+                    "optional": false
+                },
+                {
+                    "name": "multiply_for_display",
+                    "description": "How much the real value is multiplied before it is shown to the user in the settings UI. Useful to show an entire tile (60 pixels) as a 1 value.",
+                    "optional": false
+                },
+                {
+                    "name": "loca_string",
+                    "description": "The id of the NAME of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "icon",
+                    "description": "The icon of the property in the editor settings UI",
+                    "optional": false
+                },
+                {
+                    "name": "default_value",
+                    "description": "The default value of the property",
+                    "optional": false
+                },
+                {
+                    "name": "looltip_loca_string",
+                    "description": "The id of the TOOL TIP of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                }
+            ],
+            "description": "Returns a FLOAT (decimal number) tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_help",
+            "argCount": 4,
+            "arguments": [
+                {
+                    "name": "key",
+                    "description": "The identifier the editor object is saved/loaded/referred to as internally",
+                    "optional": false
+                },
+                {
+                    "name": "loca_string",
+                    "description": "The id of the NAME of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                },
+                {
+                    "name": "icon",
+                    "description": "The icon of the property in the editor settings UI",
+                    "optional": false
+                },
+                {
+                    "name": "looltip_loca_string",
+                    "description": "The id of the TOOL TIP of the property in the localization spreadsheet. In Community Edition putting a string that ISN'T a localization ID will treat the id AS the string. In vanilla it returns an \"invalid loca string\" variant.",
+                    "optional": false
+                }
+            ],
+            "description": "Returns an tool property (used to display a \"help/info\" message giving info about the object) to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_xoff",
+            "argCount": 0,
+            "arguments": [],
+            "description": "Returns a X OFFSET tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_createprop_yoff",
+            "argCount": 0,
+            "arguments": [],
+            "description": "Returns a Y OFFSET tool property to be added to an editor object in leveleditor_database_ini or modhelper_predatabase_override_me",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_predatabase_override_me",
+            "argCount": 0,
+            "arguments": [],
+            "description": "This function does nothing by default, it is meant to be hooked onto by mods. Add custom objects to the global.li_level_editor_database ds list here!",
+            "outdated": false
+        },
+        {
+            "name": "modhelper_preiconbase_override_me",
+            "argCount": 0,
+            "arguments": [],
+            "description": "This function does nothing by default, it is meant to be hooked onto by mods. Add icons to the global.li_level_editor_icons ds list here!",
+            "outdated": false
+        }
+    ]
+}
