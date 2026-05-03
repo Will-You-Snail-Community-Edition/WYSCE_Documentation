@@ -4,7 +4,7 @@ permalink: /functions/aivl_play
 # aivl_play  
 &nbsp;  
 # Description  
-A basic function to play one of squid's voicelines. For more advanced functionality, see [aivl_play_ext](/wys-documentation/functions/aivl_play_ext) and other aivl_play functions. 
+A basic function to play one of squid's voicelines. For more advanced functionality, see [aivl_play_ext](/WYSCE_Documentation/functions/aivl_play_ext) and other aivl_play functions. 
 &nbsp;  
 # Arguments
 ### localization_key

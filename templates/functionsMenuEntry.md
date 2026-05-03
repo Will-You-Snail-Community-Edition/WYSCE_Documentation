@@ -1,2 +1,2 @@
 &nbsp;  
-[[FUNCTION_NAME]](/wys-documentation/functions/[FUNCTION_NAME])
+[[FUNCTION_NAME]](/WYSCE_Documentation/functions/[FUNCTION_NAME])
